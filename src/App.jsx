@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      Hello World!
+      Hello World! - Dev Branch - Fresh Vite React Starter
     </>
   )
 }
