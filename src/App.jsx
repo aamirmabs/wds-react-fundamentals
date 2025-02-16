@@ -1,14 +1,17 @@
-// import { TodoList } from "./TodoList"
-import { NameDisplay } from "./NameDisplay"
+import { NameFunc } from "./NameFunc"
+import { TodoListItem } from "./TodoListItem";
 
 function App() {
   return (
     <div>
-      <NameDisplay />
-      {/* <h1>Todo List</h1> */}
-      {/* <TodoList ></TodoList> */}
+      <TodoListItem isComplete>
+        Todo Item 1
+      </TodoListItem>
+      <TodoListItem isComplete={false}>
+        Todo Item 2
+      </TodoListItem>
     </div>
-  )
+  );
 }
 
 export default App
