@@ -1,8 +1,12 @@
+// import { TodoList } from "./TodoList"
+import { NameDisplay } from "./NameDisplay"
+
 function App() {
   return (
-    <div className="large" id="largeDiv">
-      <label htmlFor="inputId">Number Value: </label>
-      <input id="inputId" type="number" value={3} />
+    <div>
+      <NameDisplay />
+      {/* <h1>Todo List</h1> */}
+      {/* <TodoList ></TodoList> */}
     </div>
   )
 }
