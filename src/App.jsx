@@ -1,8 +1,9 @@
 function App() {
   return (
-    <>
-      Hello World! - Dev Branch - Fresh Vite React Starter
-    </>
+    <div className="large" id="largeDiv">
+      <label htmlFor="inputId">Number Value: </label>
+      <input id="inputId" type="number" value={3} />
+    </div>
   )
 }
 
