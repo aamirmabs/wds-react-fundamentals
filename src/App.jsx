@@ -1,14 +1,18 @@
 import { NameFunc } from "./NameFunc"
 import { TodoListItem } from "./TodoListItem";
+import task from "./Tasks.json"
+
+import "./App.css"
 
 function App() {
+
+  const taskText = JSON.stringify(task.task);
+  const isComplete = JSON.stringify(task.isComplete);
+
   return (
     <div>
-      <TodoListItem isComplete>
-        Todo Item 1
-      </TodoListItem>
-      <TodoListItem isComplete={false}>
-        Todo Item 2
+      <TodoListItem isComplete={isComplete}>
+        {taskText}
       </TodoListItem>
     </div>
   );

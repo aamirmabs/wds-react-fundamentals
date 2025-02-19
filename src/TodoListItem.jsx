@@ -3,8 +3,8 @@ export function TodoListItem(props) {
 
   return (
     <div>
-      <label>
-        <input type="checkbox" checked={isComplete} />
+      <label className="list-item">
+        <input className="list-item-checkbox" type="checkbox" checked={isComplete} />
         {children}
       </label>
     </div>
