@@ -7,7 +7,8 @@ function App() {
   return (
     <div>
       <ul id="list">
-        <ListItem></ListItem>
+        <ListItem checkedStatus={false}>Checked: FALSE</ListItem>
+        <ListItem checkedStatus={true}>Checked: TRUE</ListItem>
       </ul>
 
       <Form></Form>

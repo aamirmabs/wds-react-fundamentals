@@ -1,19 +1,12 @@
-import React from 'react'
+import { Children } from 'react'
 
-export const ListItem = () => {
+export const ListItem = ({ children, itemText, checkedStatus }) => {
   return (
     <>
       <li className="list-item">
         <label className="list-item-label">
-          <input type="checkbox" data-list-item-checkbox />
-          <span data-list-item-text>Item 1</span>
-        </label>
-        <button data-button-delete>Delete</button>
-      </li>
-      <li className="list-item">
-        <label className="list-item-label">
-          <input type="checkbox" checked data-list-item-checkbox />
-          <span data-list-item-text>Item 2</span>
+          <input type="checkbox" checked={checkedStatus} data-list-item-checkbox />
+          <span data-list-item-text>{itemText} {children}</span>
         </label>
         <button data-button-delete>Delete</button>
       </li>
