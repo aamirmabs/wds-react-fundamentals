@@ -20,8 +20,17 @@ function App() {
     text: "Task 2 - Complete",
     completed: true
   }])
+  const [newTaskText, setNewTaskText] = useState('');
+
 
   // HANDLERS
+  // handler to add task
+  const handleNewTaskText = (e) => {
+    console.log("handleNewTaskText() executed.");
+
+    console.log(e.target.value);
+    setNewTaskText(e.target.value);
+  }
 
   // handler to complete task
   const handleCompleteTask = (index) => {
@@ -40,6 +49,10 @@ function App() {
     setTasksArray(updatedTasks);
   }
 
+  const handleAddNewTask = () => {
+    console.log("handleAddNewTask() executed.");
+  }
+
   return (
     <div>
       <ul id="list">
@@ -55,7 +68,11 @@ function App() {
         })}
       </ul>
 
-      <Form handlerAddTask={handlerAddTask}></Form>
+      <Form
+        handleAddNewTask={handleAddNewTask}
+        newTaskText={newTaskText}
+        handleNewTaskText={handleNewTaskText}
+      />
     </div>
   );
 }
