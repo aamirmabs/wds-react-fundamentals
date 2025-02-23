@@ -1,9 +1,10 @@
 export const Form = ({ handleNewTaskText, handleAddNewTask, newTaskText }) => {
 
+  // disable submit button if task text is 0
   let disabledStatus = false;
   if (newTaskText.length === 0) {
     disabledStatus = true;
-    console.log("Add Todo button disabled.");
+    // console.log("LOG: Add Todo button disabled.");
   }
   else {
     disabledStatus = false;
